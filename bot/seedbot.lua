@@ -232,33 +232,10 @@ function create_config( )
 	"whitelist",
 	"msg_checks"
     },
-    sudo_users = {110626080,103649648,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {196780042},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v4
-An advanced administration bot based on TG-CLI written in Lua
-
-https://github.com/SEEDTEAM/TeleSeed
-
-Admins
-@iwals [Founder]
-@imandaneshi [Developer]
-@POTUS [Developer]
-@seyedan25 [Manager]
-@aRandomStranger [Admin]
-
-Special thanks to
-awkward_potato
-Siyanew
-topkecleon
-Vamptacus
-
-Our channels
-@teleseedch [English]
-@iranseed [persian]
-
-Our website 
-http://teleseed.seedteam.org/
-]],
+    about_text = [[Creator:
+    @Dr_Root]],
     help_text_realm = [[
 Realm Commands:
 
@@ -475,64 +452,59 @@ will return group ban list
 SuperGroup Commands:
 
 !info
-Displays general info about the SuperGroup
+نشان دادن اطلاعات
 
 !admins
-Returns SuperGroup admins list
+لیست ادمین ها
 
 !owner
-Returns group owner
+لیست ادمین ها
 
 !modlist
-Returns Moderators list
+لیست مدیران
 
 !bots
-Lists bots in SuperGroup
+نشان دادن لیست ربات های گروه
 
 !who
-Lists all users in SuperGroup
+نمایش کاربران گروه
 
 !block
-Kicks a user from SuperGroup
-*Adds user to blocked list*
+بلاک کردن کسی از گروه با ریپلای انجام شود
 
 !ban
-Bans user from the SuperGroup
+بن کردن کسی از گروه
+با ریپلای انجام شود
 
 !unban
-Unbans user from the SuperGroup
+آن بن کرد از گروه با ریپلای انجام شود
 
 !id
-Return SuperGroup ID or user id
-*For userID's: !id @username or reply !id*
-
-!id from
-Get ID of user message is forwarded from
+آیدی عددی گروه
 
 !kickme
-Kicks user from SuperGroup
-*Must be unblocked by owner or use join by pm to return*
+کیک کردن شما از گروه
 
 !setowner
-Sets the SuperGroup owner
+ادمین کردن در گروه
 
 !promote [username|id]
-Promote a SuperGroup moderator
+مقام دادن
 
 !demote [username|id]
-Demote a SuperGroup moderator
+مقام گرفتن
 
 !setname
-Sets the chat name
+تغییر اسم گروه
 
 !setphoto
-Sets the chat photo
+تغییر عکس گروه
 
 !setrules
-Sets the chat rules
+تنظیم قوانین
 
 !setabout
-Sets the about section in chat info(members list)
+تغییر عنوان
 
 !save [value] <text>
 Sets extra info for chat
@@ -541,67 +513,55 @@ Sets extra info for chat
 Retrieves extra info for chat by value
 
 !newlink
-Generates a new group link
+ساخت لینک جدید
 
 !link
-Retireives the group link
+نمایش لینک گروه
 
 !rules
-Retrieves the chat rules
+قوانین
 
 !lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
-Lock group settings
+قفل کردن عنوان
 *rtl: Delete msg if Right To Left Char. is in name*
 *strict: enable strict settings enforcement (violating user will be kicked)*
 
 !unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
-Unlock group settings
+باز کردن عنوان
 *rtl: Delete msg if Right To Left Char. is in name*
 *strict: disable strict settings enforcement (violating user will not be kicked)*
 
 !mute [all|audio|gifs|photo|video|service]
-mute group message types
+اضافه کردن به لیست سکوت
 *A "muted" message type is auto-deleted if posted
 
 !unmute [all|audio|gifs|photo|video|service]
-Unmute group message types
+کسر از لیست سکوت
 *A "unmuted" message type is not auto-deleted if posted
 
 !setflood [value]
-Set [value] as flood sensitivity
+تعداد پیغام های غیر مجاز
 
 !settings
-Returns chat settings
+نمایش تنظیمات
 
 !muteslist
-Returns mutes for chat
+نمایش لیست سکوت
 
 !muteuser [username]
-Mute a user in chat
+Mسکوت یک  فردا
+با ریپلای
 *If a muted user posts a message, the message is deleted automaically
 *only owners can mute | mods and owners can unmute
 
-!mutelist
-Returns list of muted users in chat
-
 !banlist
-Returns SuperGroup ban list
+نشان دادن لیست بن شده ها
 
 !clean [rules|about|modlist|mutelist]
 
 !del
-Deletes a message by reply
+پاک کردن پیغام با ریپلای
 
-!public [yes|no]
-Set chat visibility in pm !chats or !chatlist commands
-
-!res [username]
-Returns users name and id by username
-
-
-!log
-Returns group logs
-*Search for kick reasons using [#RTL|#spam|#lockmember]
 
 **You can use "#", "!", or "/" to begin all commands
 
@@ -610,9 +570,7 @@ Returns group logs
 
 *Only moderators and owner can use block, ban, unban, newlink, link, setphoto, setname, lock, unlock, setrules, setabout and settings commands
 
-*Only owner can use res, setowner, promote, demote, and log commands
-
-]],
+*Only owner can use res, setowner, promote, demote, and log commands]],
   }
   serialize_to_file(config, './data/config.lua')
   print('saved config into ./data/config.lua')
